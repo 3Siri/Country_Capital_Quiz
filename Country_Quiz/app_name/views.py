@@ -1,7 +1,3 @@
-#from django.shortcuts import render
-
-# Create your views here.
-
 # app_name/views.py
 from django.shortcuts import render, HttpResponse
 from .models import Country
