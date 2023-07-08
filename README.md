@@ -1,6 +1,6 @@
-# SIMPLE COUNTRY QUIZ API WITH DJANGO FRAMEWORK
+#  COUNTRY QUIZ WEB APPLICATION WITH DJANGO FRAMEWORK & REST API
 
-## Django REST framework is a powerful and flexible toolkit for building Web APIs.
+## Django framework is a powerful and flexible toolkit for building Web Applications and REST API's are most widely used to perform CRUD operations for the given web application.
 
 
 ### Requirements:
@@ -10,7 +10,7 @@
 
 ### Installation:
 
-After you cloned the repository, you want to create a virtual environment, so you have a clean python installation. You can do this by running the command.
+After you have cloned the repository, you should create a virtual environment, so you have a clean python installation. You can do this by running the command.
 
 **`python -m venv env`**
 
@@ -19,10 +19,11 @@ You can install all the required dependencies by running
 
 **`pip install -r requirements.txt`**
 
-### Structure:
+
+### Country API Information:
 
 In a RESTful API, endpoints (URLs) define the structure of the API and how end users access data from our application using the HTTP methods 
-There are typically 4 methods namely - GET, POST, PUT, DELETE. Endpoints should be logically organized around collections and elements, both of which are resources. In our case, we use single method GET. we have resources, countrylist, /check-capital/ so we will use the following URLS - /check-capital/ is the checking the capital and /countrylist/ collections of country elements, respectively.
+There are typically 4 methods namely - GET, POST, PUT, DELETE. Endpoints should be logically organized around collections and elements, both of which are resources. In our case, we use a single method GET to extract country information.
 
 ### Use:
 A RESTful API with all countries with capitals in the world.
@@ -39,6 +40,10 @@ https://countriesnow.space/api/v0.1/countries/capital
 #### First, we have to start up Django's development server.
 **`python manage.py runserver`**
 
+### URLs & Models
+
+We have two major resources like countrylist (to get the country list from the given REST API) , and check-capital/ to validate the given capital with API values. Hence we will use the following URLS - /check-capital/ is the checking the capital and /countrylist/ collections of country elements, respectively.
+
 #### Only authenticated users can use the API services, for that reason if we try this:
 **http://127.0.0.1:8000/countrylist/**
 
@@ -53,11 +58,11 @@ CountryQuiz is a fun and educational web application that tests your knowledge o
 
 ![image](https://github.com/3Siri/Country_Capital_Quiz/assets/138786856/e4ff4c9c-7001-43bc-a521-d368fd426a1b)
 
-- In the case of a correct answer, the display will appear as follows
+- In the case of a correct answer, the application display will appear as follows
 
 ![image](https://github.com/3Siri/Country_Capital_Quiz/assets/138786856/c3d804d2-b5a4-40b4-a06c-df2ea430b03a)
 
-- In the case of an incorrect capital is entered.
+- In the case user enters an incorrect capital, message will display as per below.
 
 ![image](https://github.com/3Siri/Country_Capital_Quiz/assets/138786856/4ad6fb6a-a1f3-4c2c-9bd7-a88fdd80e219)
 
