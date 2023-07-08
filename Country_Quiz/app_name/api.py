@@ -21,11 +21,8 @@ def check_capital_info(country_name, capital_name):
     result = "NA"
     
     for country in data_1['data']:
-        #print("country['name'] is : ", country['name'])
         if country['name'] == country_name:
             result=country['capital']
-            
-            #if country['capital'] == capital_name:
-                #result = True
+
       
     return result
