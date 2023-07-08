@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Country Quiz</title>
+    <style>
+        body {
+            background-color: #f2f6ee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .container {
+            text-align: center;
+            border: 5px solid green;
+            padding: 20px;
+            background-color: #fff;
+        }
+        
+        form {
+            margin-top: 30px;
+        }
+        
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        input[type="text"] {
+            width: 200px;
+            padding: 5px;
+        }
+        
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #f2f6ee;
+            border: none;
+            cursor: pointer;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #010509;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Country Quiz</h1>
+        <form action="{% url 'check_capital' %}" method="GET">
+            {% csrf_token %}
+            <label for="country">Select a Country:</label>
+            <select id="country" name="country">
+                {% for key_object in key_objects %}
+                <option>{{ key_object }}</option>
+                {% endfor %}
+            </select>
+            <br><br>
+            <label for="capital">Enter Capital:</label>
+            <input type="text" name="capital" placeholder="Enter Capital">
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
