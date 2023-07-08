@@ -14,7 +14,7 @@ def fetch_country_data():
 
 
 def check_capital_info(country_name, capital_name):
-    url = 'https://countriesnow.space/api/v0.1/countries/capital'  # Replace with your API endpoint
+    url = 'https://countriesnow.space/api/v0.1/countries/capital' 
     response = requests.get(url)
     data_1 = response.json()
 
